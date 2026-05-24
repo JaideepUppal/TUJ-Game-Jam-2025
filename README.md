@@ -1,26 +1,31 @@
-# TUJ Game Jam 2025 - Life Is a Lie
+# TUJ Game Jam 2025
 
-**1st Place Winner - TUJ Game Jam 2025**
+## Project Overview
 
-This project is a Python/Pygame boss-battle game built for the TUJ Game Jam 2025 theme: **"Life is a lie"**.
+**TUJ Game Jam 2025** is a Python/Pygame boss-battle game created for Temple University Japan's Game Jam. The theme was **"Life is a lie"**.
 
-The game begins like a conventional impossible boss fight, then subverts that expectation with an unconventional empathy-based win condition. Instead of simply defeating the boss through combat, players are pushed to question the rules, pay attention to misleading instructions, and find a more compassionate way to finish the encounter.
+The game presents itself as a traditional difficult boss fight, but the ending depends on recognizing that combat is not the only path forward. Its victory condition is empathy-based rather than a standard combat victory.
 
-## Tech Stack
+## Achievement
+
+**1st Place Winner - Temple University Japan Game Jam**
+
+![Team Golem receiving the 1st place award](assets/images/team-award.jpeg)
+
+*Team Golem receiving recognition for winning 1st place at TUJ Game Jam 2025.*
+
+## Gameplay Concept
+
+Players enter a boss encounter that appears to reward persistence through combat. As the fight progresses, the game introduces misleading expectations and phase changes that support the theme, **"Life is a lie"**.
+
+The intended discovery is that the boss battle can be resolved through an unconventional empathy-based ending. This preserves the structure of a boss fight while asking the player to question the rules they were given.
+
+## Technologies Used
 
 - Python
 - Pygame 2.6.1
 
-## Team
-
-Team Golem:
-
-- Jaideep Uppal
-- Sushant Bharadwaj Kagolanu
-- Riju Pant
-- Bettina Marksteiner
-
-## Getting Started
+## Installation
 
 Clone the repository:
 
@@ -35,7 +40,7 @@ Install dependencies:
 python3 -m pip install -r requirements.txt
 ```
 
-Run the game:
+## How to Run
 
 ```bash
 python3 main-game-file.py
@@ -54,53 +59,70 @@ python3 main-game-file.py
 
 ```text
 TUJ-Game-Jam-2025/
-|-- assets/
-|   `-- images/
-|       |-- background.webp
-|       |-- backgroundTemple.webp
-|       |-- boss.png
-|       |-- boss_projectile.png
-|       |-- lava.jpg
-|       |-- player.png
-|       |-- projectile.png
-|       |-- rock.png
-|       |-- rose.webp
-|       |-- roseBW.png
-|       |-- stomp.png
-|       `-- worm.png
+|-- main-game-file.py          # Main Pygame entry point
+|-- requirements.txt           # Python dependency list
+|-- README.md                  # Project documentation
+|-- PokemonGb-RAeo.ttf         # Game font
+|-- intro_music.mp3            # Intro music
+|-- main_music.mp3             # Main gameplay music
 |-- game/
-|   |-- boss.py
-|   |-- constants.py
-|   |-- game_state.py
-|   |-- init-file.py
-|   |-- player.py
-|   `-- projectile.py
-|-- intro_music.mp3
-|-- main_music.mp3
-|-- main-game-file.py
-|-- PokemonGb-RAeo.ttf
-|-- README.md
-`-- requirements.txt
+|   |-- boss.py                # Boss behavior and attacks
+|   |-- constants.py           # Shared gameplay constants
+|   |-- game_state.py          # Game state and phase tracking
+|   |-- init-file.py           # Package marker from the original jam project
+|   |-- player.py              # Player movement, dash, stun, and rose state
+|   `-- projectile.py          # Projectile movement and collision checks
+`-- assets/
+    `-- images/
+        |-- background.webp
+        |-- backgroundTemple.webp
+        |-- boss.png
+        |-- boss_projectile.png
+        |-- lava.jpg
+        |-- player.png
+        |-- projectile.png
+        |-- rock.png
+        |-- rose.webp
+        |-- roseBW.png
+        |-- stomp.png
+        |-- team-award.jpeg
+        |-- victory-note.jpeg
+        `-- worm.png
 ```
 
 ## Skills Demonstrated
 
 - Gameplay programming with Python and Pygame
-- Real-time input handling and movement
-- Boss phase/state management
-- Collision detection and projectile behavior
-- Asset integration for sprites, fonts, backgrounds, and music
+- Real-time input handling
+- Player movement, dashing, and collision response
+- Boss phase and state management
+- Projectile behavior and collision detection
+- Asset integration for images, fonts, and music
 - Audio fallback handling for demo robustness
-- Rapid prototyping under game jam constraints
-- Designing a theme-driven gameplay twist around empathy instead of combat victory
+- Rapid prototyping under game jam time constraints
+- Designing gameplay around a theme-driven emotional twist
 
-## Screenshots / Demo
+## Team
 
-Add project media here when available:
+Team Golem:
 
-- Screenshot: TODO
-- Gameplay video: TODO
+- Jaideep Uppal
+- Sushant Bharadwaj Kagolanu
+- Riju Pant
+- Bettina Marksteiner
 
-## Notes
+## Recognition
 
-This game was created during TUJ Game Jam 2025 and won 1st place. The current version keeps the original gameplay concept while making startup, asset loading, and setup instructions cleaner for demos and code review.
+![Victory note from the professor and judges](assets/images/victory-note.jpeg)
+
+*Victory note from the professor/judges: "Victory, like great code, does not require comments."*
+
+## Screenshots
+
+Additional gameplay screenshots or a short demo video can be added here.
+
+## Future Improvements
+
+- Add gameplay screenshots or a recorded demo clip.
+- Add a short credits section for asset and audio sources, if needed.
+- Package the game for easier non-developer playtesting.

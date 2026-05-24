@@ -15,6 +15,11 @@ FONT_PATH = BASE_DIR / "PokemonGb-RAeo.ttf"
 INTRO_MUSIC_PATH = BASE_DIR / "intro_music.mp3"
 MAIN_MUSIC_PATH = BASE_DIR / "main_music.mp3"
 
+INTRO_DEFAULT_HOLD_SECONDS = 4.5
+INTRO_STORY_HOLD_SECONDS = 7.0
+INTRO_INSTRUCTIONS_HOLD_SECONDS = 7.0
+INTRO_FADE_SPEED = 18
+
 
 # Colors
 BLACK = (0, 0, 0)
@@ -102,7 +107,7 @@ def hold_intro_text(hold_time):
 
 
 # Function to fade text
-def fade_text(text, hold_time=1.2, fade_speed=18, y=None):
+def fade_text(text, hold_time=INTRO_DEFAULT_HOLD_SECONDS, fade_speed=INTRO_FADE_SPEED, y=None):
     font = load_font(20)
 
     fade_surface = pygame.Surface((screen_width, screen_height))
@@ -160,7 +165,7 @@ def run_intro():
 
     screen.fill(BLACK)
 
-    fade_text("This is our amazing game!", hold_time=1.0)
+    fade_text("This is our amazing game!", hold_time=INTRO_DEFAULT_HOLD_SECONDS)
 
     fade_text([
         "Welcome, brave adventurer!",
@@ -176,7 +181,7 @@ def run_intro():
         "to enter a world where victory",
         "is impossible... but you will",
         "have fun failing!",
-    ], hold_time=3.0)
+    ], hold_time=INTRO_STORY_HOLD_SECONDS)
 
     fade_text([
         "Instructions:",
@@ -188,7 +193,7 @@ def run_intro():
         "   Do NOT give up and show love.",
         "4. Pay VERY close attention",
         "   to those instructions",
-    ], hold_time=2.6)
+    ], hold_time=INTRO_INSTRUCTIONS_HOLD_SECONDS)
 
     stop_music()
 
