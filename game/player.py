@@ -142,3 +142,4 @@ class Player:
         self.is_dashing = False
         self.stunned = False
         self.stun_timer = 0
+        self.gotRose = False
